@@ -1,0 +1,56 @@
+# ----------------------------
+# Environment & Secrets
+# ----------------------------
+.env
+.env.*
+!.env.example
+
+# ----------------------------
+# Dependencies
+# ----------------------------
+/vendor
+/node_modules
+
+# ----------------------------
+# Build / Compiled Assets
+# ----------------------------
+/public/build
+/public/hot
+/public/mix-manifest.json
+
+# ----------------------------
+# Storage (user generated files)
+# ----------------------------
+/storage/*.key
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+/storage/logs/*
+!/storage/app/public
+
+# ----------------------------
+# Caches
+# ----------------------------
+.phpunit.result.cache
+/.phpunit.cache
+
+# ----------------------------
+# IDE / OS junk
+# ----------------------------
+.idea
+.vscode
+.vscode/*
+.DS_Store
+Thumbs.db
+
+# ----------------------------
+# Logs
+# ----------------------------
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ----------------------------
+# Laravel specific
+# ----------------------------
+bootstrap/cache/*.php
