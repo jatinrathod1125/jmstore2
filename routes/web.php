@@ -19,6 +19,7 @@ Route::middleware(['auth', 'role:admin'])->prefix('admin')->group(function () {
      Route::patch('banners/{banner}/toggle', [BannerController::class, 'toggle'])->name('admin.banners.toggle');
     Route::get('/banners/{banner}/edit', [BannerController::class, 'edit'])->name('admin.banners.edit');
     Route::post('/destroy/{banner}', [BannerController::class, 'destroy'])->name('admin.banners.destroy');
+    Route::put('/banners/{banner}', [BannerController::class, 'update'])->name('admin.banners.update');
 });
 
 Route::middleware(['auth', 'role:vendor'])->prefix('vendor')->group(function () {
