@@ -17,7 +17,10 @@
     <link rel="stylesheet" href="{{ asset('assets/vendors/flag-icon-css/css/flag-icons.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/vendors/owl-carousel-2/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/vendors/owl-carousel-2/owl.theme.default.min.css') }}">
-    <!-- End plugin css for this page -->
+
+    <!-- GrapeJS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/grapesjs/dist/css/grapes.min.css">
+
     <!-- inject:css -->
     <!-- endinject -->
     <!-- Layout styles -->
@@ -27,17 +30,18 @@
 </head>
 
 <body>
-      <div class="container-scroller">
+    <div class="container-scroller">
         @include('admin.components.sidebar')
         <div class="container-fluid page-body-wrapper">
-          @include('admin.components.navbar')
-          <div class="main-panel">
-            <div class="content-wrapper">
-              @yield('content')
+            @include('admin.components.navbar')
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    @yield('content')
+                </div>
+                @include('admin.components.footer')
             </div>
-            @include('admin.components.footer')
-          </div>
-      </div>
+        </div>
+    </div>
 
     <!-- plugins:js -->
     <script src="{{ asset('assets/vendors/js/vendor.bundle.base.js') }}"></script>
@@ -57,6 +61,13 @@
     <!-- endinject -->
     <!-- Custom js for this page -->
     <script src="{{ asset('assets/js/dashboard.js') }}"></script>
+
+    <!-- GrapeJS Libraries -->
+    <script src="https://unpkg.com/grapesjs"></script>
+    <script src="https://unpkg.com/grapesjs-blocks-basic"></script>
+
+    @stack('scripts')
+
 </body>
 
 </html>

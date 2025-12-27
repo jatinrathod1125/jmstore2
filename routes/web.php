@@ -15,6 +15,10 @@ Route::middleware(['auth', 'role:admin'])->prefix('admin')->group(function () {
     Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
     Route::get('/banners', [BannerController::class, 'index'])->name('admin.banners.index');
     Route::get('/banners/create', [BannerController::class, 'create'])->name('admin.banners.create');
+    Route::post('/banners', [BannerController::class, 'store'])->name('admin.banners.store');
+     Route::patch('banners/{banner}/toggle', [BannerController::class, 'toggle'])->name('admin.banners.toggle');
+    Route::get('/banners/{banner}/edit', [BannerController::class, 'edit'])->name('admin.banners.edit');
+    Route::post('/destroy/{banner}', [BannerController::class, 'destroy'])->name('admin.banners.destroy');
 });
 
 Route::middleware(['auth', 'role:vendor'])->prefix('vendor')->group(function () {
